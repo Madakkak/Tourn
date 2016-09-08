@@ -75,8 +75,7 @@ passport.use(new FacebookStrategy({
   //   return done(error);
   // })
   return done(null, 'login worked');
-}
-));
+}));
 
 // Redirect the user to Facebook for authentication.  When complete,
 // Facebook will redirect the user back to the application at
