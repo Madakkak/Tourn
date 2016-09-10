@@ -52,7 +52,7 @@ passport.use(new FacebookStrategy({
               done(null, user, 'login worked');
             })
             .catch((err) => {
-              // console.log(err);
+              console.log(err);
             });
         } else {
           // User exists, so we pass what we got back.
