@@ -6,6 +6,9 @@
 // Mode
 //
 
+// Change the string denoting the app's current mode
+// The mode is examined to determine whether to hide/show
+// certain elements
 export function changeMode(mode) {
   return {
     type: 'CHANGE_MODE',
@@ -17,6 +20,8 @@ export function changeMode(mode) {
 // Header
 //
 
+// Remote action:
+// Submit newly created tourn info to server
 export function submitNewTourn(info) {
   return {
     type: 'SUBMIT_NEW_TOURN',
@@ -29,6 +34,7 @@ export function submitNewTourn(info) {
   };
 }
 
+// Add
 export function addNewTourn(tournId, tournName) {
   return {
     type: 'ADD_NEW_TOURN',
