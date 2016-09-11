@@ -121,11 +121,9 @@ export default function startListeners(socket) {
 
   socket.on('tourn_started', () => {
     console.log('Socket event: tourn_started');
-    // set tournament.bracket.tournStatus = 'In Progress'
     dispatch(actions.allowInvites(false));
     dispatch(actions.setStart(true));
     dispatch(actions.updateTournStatus('In Progress'));
-    // set tournament.bracket.tournStatus = 'In Progress'
   });
 
   //
