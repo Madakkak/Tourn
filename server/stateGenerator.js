@@ -40,9 +40,9 @@ const generateTournamentData = (tournObject) => ({
   },
 });
 
-const generateUserState = (userId, tournId) => {
+const generateUserState = (userId, tournId) =>
   // console.log('Generating User State');
-  return users.findById(userId)
+  users.findById(userId)
     .then((user) => {
       if (!user) {
         throw new Error('User not found');
@@ -75,6 +75,5 @@ const generateUserState = (userId, tournId) => {
         console.log('Fatal error!', err);
       });
     });
-};
 
 module.exports = { generateUserData, generateTournamentData, generateUserState };

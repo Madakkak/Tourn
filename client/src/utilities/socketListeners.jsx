@@ -1,5 +1,6 @@
 import store from '../store.jsx';
 import * as actions from '../actions/action_creators.jsx';
+
 const dispatch = store.dispatch;
 
 // Configure client socket listeners to dispatch appropriate actions on socket events
@@ -121,11 +122,9 @@ export default function startListeners(socket) {
 
   socket.on('tourn_started', () => {
     console.log('Socket event: tourn_started');
-    // set tournament.bracket.tournStatus = 'In Progress'
     dispatch(actions.allowInvites(false));
     dispatch(actions.setStart(true));
     dispatch(actions.updateTournStatus('In Progress'));
-    // set tournament.bracket.tournStatus = 'In Progress'
   });
 
   //
