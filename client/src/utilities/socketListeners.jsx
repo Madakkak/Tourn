@@ -1,5 +1,6 @@
 import store from '../store.jsx';
 import * as actions from '../actions/action_creators.jsx';
+
 const dispatch = store.dispatch;
 
 // Configure client socket listeners to dispatch appropriate actions on socket events
