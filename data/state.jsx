@@ -1,6 +1,10 @@
 //
-// Template state
+// state.jsx
 //
+// Template state tree
+//
+
+
 const INITIAL_STATE = {
   mode: 'LoggedOut', // string identifying app mode
                      // modes: LoggedOut, LoggedIn, Edit, Registration

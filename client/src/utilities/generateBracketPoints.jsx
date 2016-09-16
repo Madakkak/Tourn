@@ -1,3 +1,6 @@
+//
+// generateBracketPoints.jsx
+//
 // We generate the offsets nescessary for comformance to a regular power of 2 sized bracket
 // We do not currently support non-power of 2 size brackets
 

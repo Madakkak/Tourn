@@ -1,5 +1,6 @@
 //
-// Bracket helpers
+// bracket_helpers.jsx
+//
 // Single elimination tournament logic
 //
 

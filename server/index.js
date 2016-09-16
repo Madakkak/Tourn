@@ -10,7 +10,7 @@ const morgan = require('morgan');
 // Client source bundle generator
 const webpack = require('webpack');
 const webpackMiddleWare = require('webpack-dev-middleware');
-const webpackConfig = require('../webpackConfig');
+const webpackConfig = require('../webpackConfig.js');
 
 // Setup web server
 const app = express();

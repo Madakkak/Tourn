@@ -19,6 +19,10 @@ const CreateTournament = (props) => {
     props.changeMode('Edit');
   };
 
+  const onSubmitClick = (tournInfo) => {
+    props.submitNewTourn(tournInfo);
+  };
+
   if (props.mode === 'Edit') {
     return (<li className="flexLeft">
       <img
@@ -29,7 +33,7 @@ const CreateTournament = (props) => {
       </img>
       &nbsp;
       <img
-        onClick={onCreateClick}
+        onClick={onSubmitClick(props.tournInfo)}
         className="header-icons"
         src="./assets/img/check-mark-32.png" alt="Submit New Tournament"
       >

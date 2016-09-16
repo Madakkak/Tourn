@@ -1,7 +1,15 @@
+//
+// unclaimedInvites.js
+//
+// Experimental system to store unclaimed invites when invites
+// are sent to users who haven't yet signed up through Facebook.
+// Currently, it's not working. Sorry to get you excited.
+//
+
 const InviteSchema = require('../schemas/unclaimedInvites.js');
 
-const mongoose = require('mongoose');
-const ObjectId = mongoose.Types.ObjectId;
+// const mongoose = require('mongoose');
+// const ObjectId = mongoose.Types.ObjectId;
 
 const Invites = module.exports;
 
