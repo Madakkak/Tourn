@@ -1,7 +1,17 @@
+//
+// BracketPlayer.jsx
+//
+// Render an individual bracket badge onto the bracket board.
+//
+
+
 import React, { PropTypes } from 'react';
 import '../../../public/assets/styles/main.css';
 
 const BracketPlayer = (props) => {
+  const onSubmitAdvanceClick = (tournId, matchIndex, player) => {
+    props.submitAdvance(tournId, matchIndex, player);
+  };
   if (props.userId === props.tournOrganizer &&
                        props.start &&
                        props.matches[props.matchIndex].status !== 'Concluded') {
@@ -12,7 +22,7 @@ const BracketPlayer = (props) => {
           src={props.player.playerPic}
           alt="A player"
           title={props.player.playerName}
-          onClick={props.submitAdvance.bind(null, props.tournId, props.matchIndex, props.player)}
+          onClick={onSubmitAdvanceClick(props.tournId, props.matchIndex, props.player)}
         >
         </img>
       </div>);

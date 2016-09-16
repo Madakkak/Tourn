@@ -1,4 +1,6 @@
 //
+// invite.jsx
+//
 // Invite button reducer
 //
 

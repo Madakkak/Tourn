@@ -1,4 +1,6 @@
 //
+// chat.jsx
+//
 // Chat reducer
 //
 import { fromJS } from 'immutable';

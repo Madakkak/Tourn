@@ -1,3 +1,9 @@
+//
+// Rules.jsx
+//
+// Component that displays tournament rules
+//
+
 import React, { PropTypes } from 'react';
 import '../../../public/assets/styles/main.css';
 

@@ -1,3 +1,8 @@
+//
+// Test.jsx
+//
+// Test component to test front-end user actions
+
 import React from 'react';
 import { connect } from 'react-redux';
 

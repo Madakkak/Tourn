@@ -4,6 +4,7 @@
 // Mongoose schema for the Unclaimed Invites collection.
 //
 
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 

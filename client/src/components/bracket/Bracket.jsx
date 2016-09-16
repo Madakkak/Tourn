@@ -1,3 +1,14 @@
+//
+// Bracket.jsx
+//
+// Bracket component to display the tournament bracket
+// along with player badges placed at match lines.
+// This is where SVG is used to dynamically draw
+// the bracket lines and populate the match positions
+// with player pictures.
+//
+
+
 import React, { PropTypes } from 'react';
 import '../../../public/assets/styles/main.css';
 import { generateBracketPoints } from '../../utilities/generateBracketPoints.jsx';
@@ -9,7 +20,6 @@ const Bracket = ({
   size,
   updateName,
   bracketSize,
-  // players,
   matches,
   submitAdvance,
   tournName,
@@ -25,7 +35,7 @@ const Bracket = ({
   console.log('Bracket: tournStatus', tournStatus);
   console.log('Bracket: tournWinner', tournWinner);
   return (
-    <article id="bracketWidth" className="teaser row col-bracket-box" style={{order: 3}}>
+    <article id="bracketWidth" className="teaser row col-bracket-box" style={{ order: 3 }}>
       <TournName
         updateName={updateName}
         tournName={tournName}
@@ -103,24 +113,24 @@ const Bracket = ({
                         height="200"
                       >
                       {
-                        /*player2.playerId === tournWinner.get('playerId') ?
+                        /* player2.playerId === tournWinner.get('playerId') ?
                           <BracketWinner
                             player={player2}
                             won
                           /> :
                           // winner._id ?
                           //   <BracketWinner player={player2} /> :*/
-                          <BracketPlayer
-                            player={player2}
-                            submitAdvance={submitAdvance}
-                            matchIndex={index}
-                            tournId={tournId}
-                            userId={userId}
-                            tournOrganizer={tournOrganizer}
-                            start={start}
-                            matches={matches}
-                            matchIndex={index}
-                          />
+                        <BracketPlayer
+                          player={player2}
+                          submitAdvance={submitAdvance}
+                          matchIndex={index}
+                          tournId={tournId}
+                          userId={userId}
+                          tournOrganizer={tournOrganizer}
+                          start={start}
+                          matches={matches}
+                          matchIndex={index}
+                        />
                       }
                       </foreignObject> : null
                   }

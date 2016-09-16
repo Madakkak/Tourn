@@ -72,7 +72,7 @@ module.exports.socket = function socketAttachment(io) {
           socket.join(result._id.toString());
         })
         .catch((err) => {
-          // console.log('Tournament creation error: ', err);
+          console.log('Tournament creation error: ', err);
           socket.emit('new_tourn_fail');
         });
       });
@@ -86,7 +86,7 @@ module.exports.socket = function socketAttachment(io) {
           .then((result) => {
             const tournResult = stateGenerator.generateTournamentData(result);
             socket.join(result._id.toString(),
-                (...args) => console.log('Joined tourn room, ', result._id.toString()));
+                () => console.log('Joined tourn room, ', result._id.toString()));
             if (result) {
               socket.emit('select_tourn_success',
                 tournResult);

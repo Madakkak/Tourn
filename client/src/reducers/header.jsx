@@ -1,4 +1,6 @@
 //
+// header.jsx
+//
 // Header reducer
 //
 // Any state changes to the header component are handled here
