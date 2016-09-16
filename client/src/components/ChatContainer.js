@@ -1,3 +1,9 @@
+//
+// ChatContainer.js
+//
+// Container for the Chat component
+//
+
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/action_creators.jsx';

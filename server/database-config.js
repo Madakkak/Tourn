@@ -1,3 +1,8 @@
+//
+// database-config.js
+//
+
+
 const mongoose = require('mongoose');
 const mongoConnectString = process.env.MONGODB_URI || 'mongodb://localhost/testdb';
 

@@ -1,3 +1,7 @@
+//
+// Store.jsx
+//
+
 import { createStore, applyMiddleware } from 'redux';
 import { fromJS } from 'immutable';
 import rootReducer from './reducers/root.jsx';

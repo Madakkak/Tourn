@@ -1,3 +1,10 @@
+//
+// BracketWinner.jsx
+//
+// Render the tournament winner when then tournament concludes
+//
+
+
 import React, { PropTypes } from 'react';
 import '../../../public/assets/styles/main.css';
 

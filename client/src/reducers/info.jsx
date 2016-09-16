@@ -1,4 +1,6 @@
 //
+// info.jsx
+//
 // Tournament info reducer
 //
 

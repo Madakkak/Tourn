@@ -1,8 +1,15 @@
+//
+// Tournament Schema
+//
+// Mongoose schema for the Tournaments collection.
+//
+
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const tournamentSchema = new Schema({
-  organizerid: Schema.ObjectId,
+  organizerId: Schema.ObjectId,
 
   name: String,
 

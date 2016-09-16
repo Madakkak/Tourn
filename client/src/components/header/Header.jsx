@@ -1,12 +1,21 @@
+//
+// Header.jsx
+//
+// Render Header component and sub-components.
+//
+
+
 import React, { PropTypes } from 'react';
 import UserTournaments from './userTournaments.jsx';
-import Alerts from './alerts.jsx';
+import Alerts from './Alerts.jsx';
 import Logout from './Logout.jsx';
 import CreateTournament from './createTournament.jsx';
 import '../../../public/assets/styles/main.css';
 import StartTournament from './startTournament.jsx';
-//TODO: if tournBracket.tournStatus === 'Concluded',
-//render canvas and tournBracket.tournWinner
+
+// TODO: if tournBracket.tournStatus === 'Concluded',
+// render canvas and tournBracket.tournWinner
+
 const Header = ({
   changeMode,
   showTournList,

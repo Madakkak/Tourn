@@ -1,3 +1,11 @@
+//
+// userTournaments.jsx
+//
+// Render the tournament drop-down list within the Header component.
+// Within the drop-down list, also render
+//
+
+
 import React, { PropTypes } from 'react';
 import '../../../public/assets/styles/main.css';
 

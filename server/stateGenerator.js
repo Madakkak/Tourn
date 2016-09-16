@@ -1,3 +1,8 @@
+//
+// stateGenerator.js
+//
+
+
 const users = require('./models/users.js');
 const tournaments = require('./models/tournaments.js');
 

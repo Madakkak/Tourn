@@ -1,20 +1,31 @@
+//
+// socketContainer.jsx
+//
+//
+
+
 import io from 'socket.io-client';
 
-let socket;
 const connectionString = `${location.protocol}//${location.hostname}${location.port === 80 ?
                          '' : `:${location.port}`}`;
-if (process.title && process.title != 'browser') {
-  socket = {};
-} else {
-  console.log('Socket canary');
-  socket = io.connect(connectionString, {
+
+const socket = (process.title && process.title !== 'browser') ?
+  {} : io.connect(connectionString, {
     reconnectionAttempts: 3,
   });
-}
 
-/**
- *  Configure socket connection settings here.
-**/
+// if (process.title && process.title !== 'browser') {
+//   socket = {};
+// } else {
+//   console.log('Socket canary');
+//   socket = io.connect(connectionString, {
+//     reconnectionAttempts: 3,
+//   });
+// }
+
+//
+// Configure socket connection settings here.
+//
 socket.on('connect', () => {
   console.log('Client socket connected');
 });

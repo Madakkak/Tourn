@@ -1,3 +1,10 @@
+//
+// TournName.jsx
+//
+// Render the tournament name within the Bracket component
+//
+
+
 import React, { PropTypes } from 'react';
 import '../../../public/assets/styles/main.css';
 

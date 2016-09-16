@@ -1,3 +1,10 @@
+//
+// auth.js
+//
+// Authorization routes for Facebook login through Passport
+//
+
+
 const express = require('express');
 const router = express.Router();
 

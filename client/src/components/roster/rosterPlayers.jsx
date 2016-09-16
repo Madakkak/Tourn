@@ -1,3 +1,10 @@
+//
+// rosterPlayers.jsx
+//
+// Render an individual player within the Roster component.
+//
+
+
 import React, { PropTypes } from 'react';
 import '../../../public/assets/styles/main.css';
 

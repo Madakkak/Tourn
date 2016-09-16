@@ -6,13 +6,13 @@ const users = require('./users.js');
 
 const Tournaments = module.exports;
 
-Tournaments.create = (organizerid, name, type, rules) =>
+Tournaments.create = (organizerId, name, type, rules) =>
   new Promise((resolve, reject) => {
-    console.log('Tournaments.create: organizerid, name, type =', organizerid, name, type);
-    users.findById(organizerid)
+    console.log('Tournaments.create: organizerId, name, type =', organizerId, name, type);
+    users.findById(organizerId)
       .then((userObject) => {
         TournamentSchema.create({
-          organizerid,
+          organizerId,
           name,
           type,
           rules,
@@ -33,6 +33,7 @@ Tournaments.create = (organizerid, name, type, rules) =>
             tournName: result.name,
           });
 
+
           userObject.save((saveErr) => {
             if (saveErr) {
               console.log('Error saving newly created tournament');
@@ -40,7 +41,7 @@ Tournaments.create = (organizerid, name, type, rules) =>
               return;
             }
 
-            Tournaments.addRosterPlayer(result, organizerid)
+            Tournaments.addRosterPlayer(result, organizerId)
               .then(() => {
                 resolve(result);
               });

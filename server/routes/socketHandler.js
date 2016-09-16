@@ -1,5 +1,11 @@
+//
+// socketHandler.js
+//
+// Handle socket events sent by client
+//
+
+
 require('babel-register');
-const INITIAL_STATE = require('../../data/state.jsx');
 const stateGenerator = require('../stateGenerator.js');
 const tournaments = require('../models/tournaments.js');
 const users = require('../models/users.js');
@@ -72,7 +78,7 @@ module.exports.socket = function socketAttachment(io) {
           socket.join(result._id.toString());
         })
         .catch((err) => {
-          // console.log('Tournament creation error: ', err);
+          console.log('Tournament creation error: ', err);
           socket.emit('new_tourn_fail');
         });
       });
@@ -86,7 +92,7 @@ module.exports.socket = function socketAttachment(io) {
           .then((result) => {
             const tournResult = stateGenerator.generateTournamentData(result);
             socket.join(result._id.toString(),
-                (...args) => console.log('Joined tourn room, ', result._id.toString()));
+                () => console.log('Joined tourn room, ', result._id.toString()));
             if (result) {
               socket.emit('select_tourn_success',
                 tournResult);
@@ -118,7 +124,7 @@ module.exports.socket = function socketAttachment(io) {
           }, (...args) => console.log(args));
         })
         .catch((err) => {
-          // console.log('create_alert error', err);
+          console.log('create_alert error', err);
           socket.emit('create_alert_fail');
         });
       });
@@ -238,7 +244,7 @@ module.exports.socket = function socketAttachment(io) {
           io.to(data.to).emit('tourn_started');
         })
         .catch((err) => {
-          // console.log('Start tourn error: ', err);
+          console.log('Start tourn error: ', err);
           socket.emit('start_tourn_fail');
         });
       });
@@ -254,7 +260,10 @@ module.exports.socket = function socketAttachment(io) {
           data.entry.timeStamp)
         .then((result) => {
           socket.emit('submit_chat_success');
+
+          console.log('submit chat result:', result);
           console.log('Sending udpate_chat to:', data.to);
+
           io.to(data.to).emit('update_chat', {
             authorId: socket.request.user._id,
             authorName: socket.request.user.name,

@@ -1,4 +1,6 @@
 //
+// mode.jsx
+//
 // Mode reducer
 //
 

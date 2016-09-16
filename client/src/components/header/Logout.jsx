@@ -1,6 +1,12 @@
+//
+// Logout.jsx
+//
+// Render Logout button if user is signed in.
+//
+
+
 import React, { PropTypes } from 'react';
 import Cookies from 'js-cookie';
-
 import '../../../public/assets/styles/main.css';
 
 const Logout = (props) => {
@@ -15,7 +21,8 @@ const Logout = (props) => {
         className="header-icons"
         src="./assets/img/logout.png" alt="Logout"
       ></img>
-  </li>);
+    </li>
+  );
 };
 
 Logout.propTypes = {

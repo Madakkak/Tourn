@@ -1,3 +1,12 @@
+//
+// startTournament.jsx
+//
+// Render the start tournament button if the
+// tournament is still in registration mode and is
+// allowing new players to join.
+//
+
+
 import React, { PropTypes } from 'react';
 import '../../../public/assets/styles/main.css';
 

@@ -8,7 +8,7 @@ const UnclaimedInvites = require('./unclaimedInvites.js');
 // Create a new user entry in the users collection
 Users.create = (name, fbid, picture) =>
   new Promise((resolve, reject) => {
-    console.log("Users.create: name, fbid, picture:", name, fbid, picture);
+    console.log('Users.create: name, fbid, picture:', name, fbid, picture);
     UsersSchema.create({ name, fbid, picture }, (err, user) => {
       if (err) { reject(err); return; }
 

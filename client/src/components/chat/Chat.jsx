@@ -1,3 +1,12 @@
+//
+// Chat.jsx
+//
+// Render the chat component. The chat will be updated
+// with a message history, refreshed every time the tourn is selected
+// or the user sends a new message.
+//
+
+
 import React, { PropTypes } from 'react';
 import '../../../public/assets/styles/main.css';
 import moment from 'moment';
@@ -16,7 +25,7 @@ const Chat = (props) => {
                      moment().format('ddd, h:mmA'));
   };
 
-  return (<aside className="teaser col-1-3" style={{order: 6}}>
+  return (<aside className="teaser col-1-3" style={{ order: 6 }}>
     <h4>CHAT</h4>
     <div className="list-padding">
       <ul>
@@ -55,6 +64,7 @@ Chat.propTypes = {
   submitChat: PropTypes.func,
   chat: PropTypes.object,
   tournId: PropTypes.string,
+  userName: PropTypes.string,
 };
 
 export default Chat;
